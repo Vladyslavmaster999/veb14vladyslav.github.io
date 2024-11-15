@@ -1,1 +1,60 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Трикутні числа та квадрати</title>
+</head>
+<body>
+    <h2>Трикутні числа</h2>
+    <p id="output"></p>
+
+    <h2>Квадрати чисел</h2>
+    <p id="outputSquares"></p>
+    
+    <h2>Об'єднаний масив</h2>
+    <p id="outputCombined"></p>
+
+    <h2>Відсортований об'єднаний масив (у зворотному порядку)</h2>
+    <p id="outputSorted"></p>
+
+    <script>
+        // Масив для збереження трикутних чисел
+        let Treag = [];
+        
+        // Обчислення трикутних чисел і додавання їх до масиву
+        for (let n = 1; n <= 10; n++) {
+            let triangularNumber = n * (n + 1) / 2;
+            Treag.push(triangularNumber);
+        }
+        
+        // Виведення масиву трикутних чисел на екран через два пробіли
+        document.getElementById("output").textContent = Treag.join("  ");
+        
+        // Масив для збереження квадратів чисел
+        let kvd = [];
+
+        // Обчислення квадратів чисел і додавання їх до масиву
+        for (let n = 1; n <= 10; n++) {
+            let squareNumber = n * n;
+            kvd.push(squareNumber);
+        }
+        
+        // Виведення масиву квадратів чисел на екран через два пробіли
+        document.getElementById("outputSquares").textContent = kvd.join("  ");
+        
+        // Об'єднання масивів Treag та kvd в новий масив rez
+        let rez = Treag.concat(kvd);
+
+        // Виведення об'єднаного масиву на екран
+        document.getElementById("outputCombined").textContent = rez.join("  ");
+        
+        // Сортування масиву rez у зворотному порядку
+        rez.sort((a, b) => b - a);
+
+        // Виведення відсортованого масиву на екран
+        document.getElementById("outputSorted").textContent = rez.join("  ");
+    </script>
+</body>
+</html>
 
