@@ -9,30 +9,30 @@
             let fruits = ['apple', 'pineapple', 'mango', 'melon', 'grape'];
             let citrus = ['orange', 'lemon', 'lime'];
 
-            document.write("<p><strong>Original fruits array:</strong> " + fruits.join(", ") + "</p>");
+            document.write("<p><strong>fruits масив:</strong> " + fruits.join(", ") + "</p>");
             
-            document.write("<p><strong>Citrus array:</strong> " + citrus.join(", ") + "</p>");
+            document.write("<p><strong>citrus масив:</strong> " + citrus.join(", ") + "</p>");
             
             let combinedArray = fruits.concat(citrus);
-            document.write("<p><strong>Combined array:</strong> " + combinedArray.join(", ") + "</p>");
+            document.write("<p><strong>об'єднаний масив :</strong> " + combinedArray.join(", ") + "</p>");
             
             let modifiedFruits = [...fruits];
             let indexAfterMango = modifiedFruits.indexOf('mango') + 1;
             modifiedFruits.splice(indexAfterMango, 0, 'pear', 'cherry', 'plum', 'raspberry', 'strawberry');
-            document.write("<p><strong>Fruits after adding elements:</strong> " + modifiedFruits.join(", ") + "</p>");
+            document.write("<p><strong>масив fruits після додавання елементів:</strong> " + modifiedFruits.join(", ") + "</p>");
 
             let reducedFruits = [...fruits];
             reducedFruits.splice(-3, 3);
-            document.write("<p><strong>Fruits after removing last 3 elements:</strong> " + reducedFruits.join(", ") + "</p>");
+            document.write("<p><strong>масив fruits після видалення останніх 3 елементів:</strong> " + reducedFruits.join(", ") + "</p>");
             
             let sortedFruits = [...fruits].sort();
-            document.write("<p><strong>Fruits sorted alphabetically:</strong> " + sortedFruits.join(", ") + "</p>");
+            document.write("<p><strong>масив fruits відсортований за алфавітом:</strong> " + sortedFruits.join(", ") + "</p>");
             
             let reverseSortedFruits = [...fruits].sort().reverse();
-            document.write("<p><strong>Fruits sorted in reverse alphabetical order:</strong> " + reverseSortedFruits.join(", ") + "</p>");
+            document.write("<p><strong>масив fruits відсортований в зворотному алфавітному порядку:</strong> " + reverseSortedFruits.join(", ") + "</p>");
             
             let sortedByLength = [...fruits].sort((a, b) => a.length - b.length);
-            document.write("<p><strong>Fruits sorted by word length:</strong> " + sortedByLength.join(", ") + "</p>");
+            document.write("<p><strong>масив fruits відсортований за довжиною слова:</strong> " + sortedByLength.join(", ") + "</p>");
         });
     </script>
 </head>
