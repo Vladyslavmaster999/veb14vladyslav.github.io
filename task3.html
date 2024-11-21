@@ -2,28 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Lab 4 Task 2</title>
+    <title>task3</title>
 </head>
 <body>
     <script>
-        // Генеруємо масив з випадковими значеннями (не менше 15 елементів)
+
         let array = [];
         for (let i = 0; i < 15; i++) {
-            array.push(Math.floor(Math.random() * 100)); // Додаємо випадкові числа від 0 до 99
+            array.push(Math.floor(Math.random() * 100)); 
         }
 
-        // Виводимо початковий масив
         document.write("Початковий масив: " + array.join(", ") + "<br>");
 
-        // Обчислюємо добуток чисел на місцях, кратних 4
-        let product = 1; // Початковий добуток
+        let product = 1; 
         for (let i = 0; i < array.length; i++) {
-            if (i % 4 === 0) { // Індекс кратний 4
+            if (i % 4 === 0) { 
                 product *= array[i];
             }
         }
 
-        // Рахуємо кількість чисел, не більше за 10
         let count = 0;
         for (let num of array) {
             if (num <= 10) {
@@ -31,7 +28,6 @@
             }
         }
 
-        // Виводимо результати
         document.write("Добуток чисел на місцях, кратних 4: " + product + "<br>");
         document.write("Кількість чисел, не більше за 10: " + count);
     </script>
