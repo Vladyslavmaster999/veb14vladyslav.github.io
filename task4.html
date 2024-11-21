@@ -9,41 +9,32 @@
             let fruits = ['apple', 'pineapple', 'mango', 'melon', 'grape'];
             let citrus = ['orange', 'lemon', 'lime'];
 
-            // Original fruits array
             document.write("<p><strong>Original fruits array:</strong> " + fruits.join(", ") + "</p>");
             
-            // Citrus array
             document.write("<p><strong>Citrus array:</strong> " + citrus.join(", ") + "</p>");
             
-            // Combined array
             let combinedArray = fruits.concat(citrus);
             document.write("<p><strong>Combined array:</strong> " + combinedArray.join(", ") + "</p>");
             
-            // Add elements after 'mango'
             let modifiedFruits = [...fruits];
             let indexAfterMango = modifiedFruits.indexOf('mango') + 1;
             modifiedFruits.splice(indexAfterMango, 0, 'pear', 'cherry', 'plum', 'raspberry', 'strawberry');
             document.write("<p><strong>Fruits after adding elements:</strong> " + modifiedFruits.join(", ") + "</p>");
-            
-            // Remove last 3 elements
+
             let reducedFruits = [...fruits];
             reducedFruits.splice(-3, 3);
             document.write("<p><strong>Fruits after removing last 3 elements:</strong> " + reducedFruits.join(", ") + "</p>");
             
-            // Sorted in alphabetical order
             let sortedFruits = [...fruits].sort();
             document.write("<p><strong>Fruits sorted alphabetically:</strong> " + sortedFruits.join(", ") + "</p>");
             
-            // Sorted in reverse alphabetical order
             let reverseSortedFruits = [...fruits].sort().reverse();
             document.write("<p><strong>Fruits sorted in reverse alphabetical order:</strong> " + reverseSortedFruits.join(", ") + "</p>");
             
-            // Sorted by word length
             let sortedByLength = [...fruits].sort((a, b) => a.length - b.length);
             document.write("<p><strong>Fruits sorted by word length:</strong> " + sortedByLength.join(", ") + "</p>");
         });
     </script>
 </head>
-<body>
-</body>
+
 </html>
